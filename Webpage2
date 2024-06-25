@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Headings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 20px 0;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        /* Fade-in animation for h1 */
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Slide-in from left animation for h2 */
+        .slide-in-left {
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Color change animation for h3 */
+        .color-change {
+            animation: colorChange 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #3498db;
+            }
+            100% {
+                color: #e74c3c;
+            }
+        }
+
+        /* Slide-in from right animation for h4 */
+        .slide-in-right {
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        @keyframes slideInRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="fade-in">Welcome to My Website</h1>
+    <h2 class="slide-in-left">About Us</h2>
+    <h3 class="color-change">Our Services</h3>
+    <h4 class="slide-in-right">Contact Information</h4>
+</body>
+</html>
